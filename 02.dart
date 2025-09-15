@@ -6,29 +6,30 @@ class Employee {
 }
 
 class Manager extends Employee {
-  String dept;
+  String department;
 
-  Manager(String name, double salary, this.dept) : super(name, salary);
+  Manager(String name, double salary, this.department) : super(name, salary);
 
-  void show() {
-    print("Manager: $name, Salary: $salary, Dept: $dept");
+  void displayInfo() {
+    print("Manager: $name, Salary: $salary, Department: $department");
   }
 }
 
 class Developer extends Employee {
-  String lang;
+  String programmingLanguage;
 
-  Developer(String name, double salary, this.lang) : super(name, salary);
+  Developer(String name, double salary, this.programmingLanguage)
+    : super(name, salary);
 
-  void show() {
-    print("Developer: $name, Salary: $salary, Lang: $lang");
+  void displayInfo() {
+    print("Developer: $name, Salary: $salary, Language: $programmingLanguage");
   }
 }
 
 void main() {
-  Manager a = Manager("Jasim", 80000, "Finance");
-  Developer b = Developer("Mohsin", 65000, "Dart");
+  Manager m = Manager("Jasim", 80000, "Finance");
+  Developer d = Developer("Mohsin", 65000, "Dart");
 
-  a.show();
-  b.show();
+  m.displayInfo();
+  d.displayInfo();
 }
