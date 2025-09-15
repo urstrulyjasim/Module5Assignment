@@ -1,24 +1,24 @@
 abstract class Appliance {
-  void on();
-  void off();
+  void turnOn();
+  void turnOff();
 }
 
 class Fan extends Appliance {
-  void on() {
+  void turnOn() {
     print("Fan is now running");
   }
 
-  void off() {
+  void turnOff() {
     print("Fan is turned off");
   }
 }
 
 class Light extends Appliance {
-  void on() {
+  void turnOn() {
     print("Light is switched on");
   }
 
-  void off() {
+  void turnOff() {
     print("Light is switched off");
   }
 }
@@ -27,8 +27,9 @@ void main() {
   Fan f = Fan();
   Light l = Light();
 
-  f.on();
-  f.off();
-  l.on();
-  l.off();
+  f.turnOn();
+  f.turnOff();
+
+  l.turnOn();
+  l.turnOff();
 }
